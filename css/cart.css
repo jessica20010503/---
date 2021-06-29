@@ -1,0 +1,341 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*product-menu*/
+.product{
+    background: #EFE9E7;
+    display: flex;
+    
+    padding: 48px 42px;
+
+}
+.product .product_menu{
+    width: 25%;
+}
+.product .product_menu ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.product .product_menu h1{
+    font-size: 25px;
+    color: #3D1101;
+    margin-bottom: 16px;
+    
+}
+.product .product_menu li a{
+    margin-right: 20px;
+    display: block;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 10px 8px;
+    color: #3D1101;
+    text-decoration: none;
+    border-bottom: 2px solid #3D1101;
+}
+.product .product_menu li a:hover{
+    transition: all 0.5s;
+    color: #fff;
+    background-color: #3D1101;
+    font-weight: normal;
+}
+.product .product_menu li a:focus{
+    color: #000;
+    background-color: 	#ec7f4c;
+    font-weight: bolder;
+}
+
+/*product-card*/
+.product .card{
+    width: 75%;
+}
+.product .card .head{
+    display: flex;
+    justify-content: space-between;
+}
+.card .search{
+    display: flex;
+    justify-content: space-between;
+}
+.card .search input{
+    display: block;
+    width: 424px;
+    height: 35px;
+    border: 2.5px solid #3D1101;
+    font-size: 18px;
+    padding: 5px;
+    position: relative;
+    margin-bottom: 26px;
+}
+.card .search button{
+    display: block;
+    width: 36px;
+    height: 35px;
+    background: #3D1101;
+    color: #fff;
+    position: absolute;
+    margin-left: 415px;
+}
+.card .search button:active{
+    background-color: 	#ec7f4c;
+    border:#3D1101 solid 2px;
+}
+.card .cart{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3D1101;
+}
+.card .cart:hover{
+    color: #ff5e45;
+    font-weight: bolder;
+}
+.card .cart p{
+    border-right: #3D1101 3px solid;
+    padding-right: 17px;
+    margin-right: 17px;
+}
+.card .cart .fa-shopping-cart{
+    font-size: 29px;
+}
+.cart .fa-shopping-cart::after {
+    content: '1';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff5e45;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #efe9e7;
+    position: absolute;
+    margin-left: -5px;
+}
+.product .item>li{
+    float: left;
+    width: 30.33333%;
+    height: 280px;
+    box-shadow: 1px 1px 5px 1px rgb(201, 201, 201);
+    padding-bottom: 10px;
+    margin: 10px 3% 20px 0;
+    position: relative;
+    
+	overflow: hidden;
+	white-space: nowrap;
+}
+.product .item>li:hover{
+    
+    box-shadow: 0px 0px 5px 5px #ADADAD;
+}
+.product .item>li img{
+    object-fit: cover;
+    height: 120px;
+    width: 100%;
+}
+.product .item>li h2{
+    margin-top: 11px;
+    color: #3D1101;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.product .item>li h1{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #3D1101;
+    text-align: center;
+}
+.product .item hr{
+    width: 60%;
+}
+.product .item>li p{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #3D1101;
+    text-align: center;
+    margin-bottom: 13px;
+}
+.product .add_btn{
+    font-size: 16px;
+    display: block;
+    width: 80%;
+    color: #FF5E45;
+    border: 2.5px solid #FF5E45;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+}
+.product .add_btn:hover{
+    color: #fff;
+    background: #FF5E45;
+}
+.like{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    margin: 7px 9px;
+}
+.like{
+	font-weight: bold;
+}
+.product .item  .label{
+    text-align: center;
+    width: 110px;
+    position: absolute;
+    top: 16px;
+	right: -30px;
+    background:#00CC99;
+    color: white;
+    padding: 8px;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
+}
+@media (max-width:768px) {
+    .card .search input{
+        width: 360px;
+    }
+    .card .search button{
+        margin-left: 330px;
+    }
+    .product .product_menu h1{
+        font-size: 14px;
+        padding: 0 0 10px 0;
+    }
+    .product .product_menu li a{
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+@media (max-width:767px) {
+    .product{
+        flex-direction: column;
+    }
+    .product .product_menu{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .product .product_menu .list h1{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .product .product_menu a{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .product .item>li{
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+@media (max-width:485px) {
+    .product .card .head{
+        flex-direction: column;
+    }
+    .card .search{
+        margin: 0 auto;
+    }
+    .card .search input{
+        width: 290px;
+        margin-top: 30px;
+    }
+    .card .search button{
+        margin-top: 30px;
+        margin-left: 290px;
+        padding: 5px;
+    }
+    .card .cart{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 30px 0 0;
+        margin: 0 auto;
+    }
+
+}
+@media (max-width:376px) {
+    .card .search input{
+        width: 255px;
+    }
+    .card .search button{
+        margin-left: 255px;
+        padding: 5px;
+    }
+}
+@media (max-width:320px) {
+    .product{
+        padding: 10px;
+    }
+    .product_menu{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .card .search input{
+        width: 284px;
+        margin-left: 8px;
+    }
+    .card .search button{
+        margin-left: 260px;
+    }
+    .card .cart{
+        margin: 0 5px 0 0;
+    }
+    .product .item>li{
+        width: 98%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+
+

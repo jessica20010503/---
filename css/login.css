@@ -1,0 +1,178 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*logon*/
+.login{
+    background: #efe9e7;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.login_text{
+    text-align: center;
+    color: #3D1101;
+}
+.login .login_text h1{
+    font-weight: bolder;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+.login .login_text p{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.login form{
+    max-width: 300px;
+    padding: 15px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 4px 0px rgb(170, 170, 170);
+    border-top: 5px solid #F56C23;
+}
+.login form h2{
+    font-size: 18px;
+    color: #3D1101;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 16px;
+}
+form .login_content{
+    width: 90%;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+form .login_content a{
+    display: block;
+    color: #f56c23;
+    text-decoration: none;
+}
+form .login_content a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.email,.password{
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.fa-envelope, .fa-lock{
+    position: absolute;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    opacity: 0.3;
+    color: #3D1101;
+}
+.email input,.password input{
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    margin-top: 3px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
+.login_btn{
+    text-align: center;
+    margin-top: 30px;
+}
+.login_btn .btn1{
+    height: 32px;
+    width: 45%;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: #a09e9e;
+    border: none;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+.login_btn .btn2{
+    height: 32px;
+    width: 45%;
+    background-color: #f56c23;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border: none;
+    border-radius: 3px;
+}
+.login_btn .btn1:hover{
+    background-color: 	#7B7B7B;
+}
+.login_btn .btn2:hover{
+    background-color: 	#D94600;
+}
+@media (max-width:767px) {
+    .login form{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (max-width:480px) {
+    .login form{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width:375px) {
+    .login .login_text h1{
+        font-size: 36px;
+    }
+    .login_btn .btn1,.login_btn .btn2{
+        width: 40%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+}

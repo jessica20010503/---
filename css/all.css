@@ -1,0 +1,351 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* wrap */
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* header*/
+.header{
+    background: rgba(0,0,0,0.8);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo h1{
+	color: #fff;
+	font-weight: bolder;
+	text-decoration: none;
+	background-image: url(../images/logo_w@svg.svg);
+	max-width: 120px;
+	height: 24px;
+	text-indent: 120px;
+	overflow: hidden;
+	white-space: nowrap;
+    margin-left: 42px;
+    margin-top: 16px;
+}
+.menu li{
+    float: left;
+}
+.header .container .menu>li>a{
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+.header .container .menu>li>a:hover{
+	color: #FFE153;
+    border-radius: 30px;
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+.header .container .menu{
+	display: flex;
+	justify-content: space-between;
+}
+.header .container .menu>li{
+	margin-top: 17px;
+	padding-bottom: 17px;
+	padding-right: 10px;
+	min-width: 80px;
+
+}
+.showmenu{
+	display: none;
+    width: 25px;
+}
+@media(max-width:767px){
+    .logo h1{
+        margin-left: 13px;
+    }
+    .menu {
+        flex-direction: column;
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 1s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        /*header 46px+1px boder 線條*/
+        top: 47px;
+        left: 0;
+        right: 0;
+        background: #842B00;
+    }
+    .menu li{
+        float: none;
+        border-bottom: 1px dashed #9D9D9D;
+        text-align: center;
+    }
+    .header .container .menu>li>a:hover{
+        color: #FF7575;
+        border-radius: 30px;
+        font-weight: bolder;
+        text-shadow: 0.1em 0.1em 0.2em black
+    }
+    
+    .showmenu{
+        display: block;
+        float: right;
+        margin: 1em;
+    }
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px
+    }
+}
+.fa-bars{
+    display: none;
+    color: #fff;
+}
+
+/* banner */
+
+.banner{
+	margin: 0 auto;
+	background: url(../images/header_desktop.png) center no-repeat;
+    height: 420px;
+	max-width: 100%;
+}
+.banner h1{
+	font-size: 36px;
+	margin-bottom: 16px;
+	color: #fff;
+}
+.banner p{
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #fff;
+}
+.banner .text{
+	margin: 0 auto;
+	margin-top: 123px;
+	background: rgba(0,0,0,0.4);
+	padding: 20px;
+}
+@media (max-width:768px) {
+    .banner .text{
+        left: 20%;
+    }
+}
+@media (max-width:767px) {
+    .banner_outside{
+        background: #000;
+    }
+    .banner{
+        background: url(../images/header_mobile.png) center no-repeat;
+    }
+    .banner .text{
+        width: 90%;
+        top: 15%;
+        left: 5%;
+    }
+    .banner  h1,p{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .banner  h1{
+        padding-bottom: 0px;
+        font-size: 25px;
+    }
+}
+@media (max-width:480px) {
+    .banner .text{
+        top: 15%;
+    }
+    .banner .text h2{
+        font-size: 20px;
+    }
+    .banner .text p{
+        font-size: 14px;
+    }
+}
+
+/*footer */
+.footer{
+	width: 100%;
+	height: auto;
+	background: #efe9e7;
+    display: flex;
+	justify-content: space-between;
+    padding-top: 50px;
+    padding-left: 42px;
+    padding-right: 42px;
+    box-sizing: border-box;
+}
+.footer .text{
+	display: flex;
+	justify-content:start;
+	
+}
+.footer  ul>li{
+    margin-left: 21px;
+	list-style: disc inside;
+}
+.footer .phone_link:hover,.footer .gmail_link:hover{
+    color: 	#EA0000;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+.footer .about,.contact{
+	max-width: 48%;
+	margin-right: 1%;
+	margin-left: 1%;
+	margin-bottom: 72px;
+}
+.footer .text h1{
+	font-size: 32px;
+	color: #3D1101;
+	font-weight: bolder;
+	margin-bottom: 16px;
+}
+.footer .text p, .footer .contact ul>li>a{
+	font-size: 16px;
+	color: #3D1101;
+	text-decoration: none;
+	line-height: 20px;
+}
+.footer .logo .footer_logo{
+	float: right;
+}
+.footer .logo .icon{
+	margin-top: 22px;
+	margin-bottom: 72px;
+	float: right;
+}
+.footer .logo .icon a{
+	margin-top: 22px;
+	margin-left: 11px;
+}
+.footer .fa-google-plus-square{
+	color: #DB4437;
+	font-size: 36px;
+}
+.footer .fa-google-plus-square:hover{
+	color: 	#A23400;
+	font-size: 36px;
+}
+.footer .fa-twitter-square{
+	color: #41ABE1;
+	font-size: 36px;
+}
+.footer .fa-twitter-square:hover{
+	color: 		#0072E3;
+	font-size: 36px;
+}
+.footer .fa-facebook-square{
+	color: #3A5795;
+	font-size: 36px;
+}
+.footer .fa-facebook-square:hover{
+	color: 	#003060;
+	font-size: 36px;
+}
+@media (max-width:767px) {
+    .footer,.footer .text, .footer .logo{
+        flex-direction: column;
+    }
+    .footer .about,.footer .contact,.logo{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .footer .icon{
+        float: right;
+    }
+}
+@media (max-width:766px)and(max-width:481px) {
+    .footer .logo{
+        flex-direction: column;
+    }
+    .footer .icon{
+        float: right;
+    }
+}
+@media (max-width:480px) {
+    .footer{
+        padding: 40px 20px;
+    }
+}
+
+/*top*/
+.top{
+    position: fixed;
+    bottom: 5%;
+    right: 3.5%;
+    z-index: 10;
+}
+.fa-stack{
+	font-size: 26px;
+	color: 		#750000;
+}
+.fa-stack:hover{
+	color: 		#01B468;
+}
+.fa-circle{
+	text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.fa-chevron-up{
+	color: #fff;
+	font-size: 26px;
+}
+.fa-chevron-up:hover{
+	color: 	#006000;
+	
+}
